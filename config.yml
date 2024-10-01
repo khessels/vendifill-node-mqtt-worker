@@ -1,0 +1,34 @@
+api:
+  username: "kees.hessels@gmail.com"
+  password: "Hades666"
+  method: "http"
+  host: "local.vendifill.com"
+  port: 80
+
+mqtt:
+  anonymous: true
+  username: "kees.hessels@gmail.com"
+  password: "Hades666"
+  protocol: "mqtt"
+  host: "192.168.100.81"
+  port: 1883
+  clientId: "development-localhost-khessels"
+  clean: true
+  timeout: 4000
+  reconnect: 1000
+  subscribes:
+    - server
+    - heartbeat
+
+messages:
+  inventory:
+    create:
+      random:
+        key: "inventory.create.random"
+        value:
+          cols: 3
+          rows: 3
+          min: 3
+          max: 10
+    report:
+      key: "inventory.report"
